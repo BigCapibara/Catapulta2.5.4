@@ -9,24 +9,21 @@ container.addEventListener("mousemove", (e) => {
   bg.style.left = `${w - 300}px`;
 });
 
-let exp = true;
+let exp = true
 
 const expander = document.getElementById("expander");
 const sect = document.getElementById("sec-2");
 
-expander.addEventListener("click", () => {
-  if (exp) {
-    sect.style.height = 100vh;
-    sect.style.overflowY = "scroll";
-    sect.style.paddingTop = "100px";
-    exp = false;
-  } else {
-    sect.style.height = 0;
-    sect.style.overflowY = "hidden";
-    sect.style.paddingTop = "0";
-    exp = true;
-  }
-});
+expander.addEventListener("click",()=>{
+    if(exp){
+        sect.style.height = `100vh`;
+        exp = false;
+    } else {
+        sect.style.height = `0`;
+        exp = true;
+    }
+})
+
 
 const navs = document.querySelectorAll(".navs");
 
